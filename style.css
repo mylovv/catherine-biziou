@@ -1,0 +1,126 @@
+body {
+  font-family: Overpass;
+  margin: 0;
+  overflow-x: hidden; /* Ajoutez cette ligne pour empêcher le défilement horizontal */
+}
+
+h1, h2, h3 {
+  color: #404042;
+  font-family: Chivo;
+}
+
+p {
+  color: #404042;
+  opacity: .7;
+}
+h2 {
+  margin-left: 20px; 
+}
+
+.container {
+  width: 800px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 700px) {
+  .container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-white {
+    width: 80%; 
+    margin: 8px 0; 
+  }
+}
+
+
+.banner {
+  background-image: url('avion.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  text-align: center;
+  filter: brightness(112%) saturate(100%) hue-rotate(0deg);
+}
+
+.banner h1 {
+  color: white;
+  font-size: 80px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transform: translateZ(100px);
+}
+
+.banner p {
+  color: white;
+  font-size: 24px;
+}
+
+.button-blue {
+  background-color: #1A48E3;
+  color: white;
+  padding: 16px 48px;
+  border-radius: 4px;
+  display: inline-block;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.button-blue:hover {
+  background-color: #0D1EC6;
+  color: white;
+}
+.button-blue {
+  margin-top: 900px; /* Ajoute un espace supplémentaire de 20 pixels en haut du bouton */
+}
+
+.card-white {
+  /* Styles de base pour les cartes */
+  grid-gap: 25px;
+  background: whitesmoke;
+  box-shadow: 0 0 16px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  width: 200px;
+  text-align: center;
+  padding: 24px;
+  margin: 8px;
+}
+
+/* Code pour changer les images des cartes */
+.card-white:nth-child(1) img {
+  content: url('shanghai.png');
+}
+
+.card-white:nth-child(2) img {
+  content: url('London.jpg');
+}
+
+.card-white:nth-child(3) img {
+  content: url('Paris.jpg');
+}
+
+.card-white img {
+  width: 250px; /* Nouvelle largeur de l'image */
+  height: 250px; /* Nouvelle hauteur de l'image */
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card-white h3 {
+  margin-bottom: 0;
+}
+
+.footer {
+  background: #404042;
+  text-align: center;
+  padding: 24px 0;
+}
+
+.footer p {
+  color: white;
+}
